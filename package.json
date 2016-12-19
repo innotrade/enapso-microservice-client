@@ -1,0 +1,28 @@
+{
+  "name": "enapso-microservice-client",
+  "version": "1.0.0",
+  "description": "HTTP/WebSocket Client (JavaScript) for Enapso Microservices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests --compilers js:mocha-traceur"
+  },
+  "keywords": [
+    "enapso",
+    "server",
+    "javascript",
+    "scripting",
+    "java",
+    "micro-service"
+  ],
+  "devDependencies": {
+    "chai": "^3",
+    "mocha": "^2",
+    "mocha-traceur": "^2",
+    "traceur": "^0"
+  },
+  "author": "Rolando Santamaria Maso <rsantamaria@innotrade.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "enapso-client-js": "^1.0.0"
+  }
+}
