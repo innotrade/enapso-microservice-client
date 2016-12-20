@@ -43,7 +43,7 @@ The library use [ES6 Promise](https://developers.google.com/web/fundamentals/get
     offset: 0,
     length: 50
   }).then((response) => {
-      console.log(response);
+    console.log(response);
   }).catch(console.error);
   ```
 
