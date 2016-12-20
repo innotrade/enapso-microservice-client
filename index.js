@@ -15,7 +15,6 @@
  */
 
 const HttpClient = require('enapso-client-js').HttpClient;
-const EventEmitter = require('eventemitter2').EventEmitter2;
 const parse = require('./lib/parser.js');
 
 class MicroServiceGenerator {
