@@ -28,7 +28,6 @@ describe('Promise based API', () => {
         it('open', (done) => {
             generator.open().then(done);
         });
-
     });
 
     describe('generating micro-service', () => {
@@ -41,12 +40,23 @@ describe('Promise based API', () => {
             });
         });
 
-        it('calling EnapsoOntology micro-service method...', (done) => {
+        it('calling EOS.ontology.list micro-service method...', (done) => {
             EOS.ontology.list({
                 offset: 0,
                 length: 1000
             }).then((response) => {
                 expect(response.result.data.total > 0).to.equal(true);
+                done();
+            });
+        });
+
+        it('calling EOS.individual.get micro-service method...', (done) => {
+            EOS.individual.get({
+                ontologyAlias: "EnapsoUnits",
+                IRI: "I_afd5f9fa6049bdbec3365abcc96567fb",
+                deepSearch: true
+            }).then((response) => {
+                expect(response.code === 0).to.equal(true);
                 done();
             });
         });
