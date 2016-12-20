@@ -24,5 +24,15 @@
   "license": "Apache-2.0",
   "dependencies": {
     "enapso-client-js": "^1.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:innotrade/enapso-microservice-client.git"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "lib/"
+  ]
 }
