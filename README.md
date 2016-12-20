@@ -58,7 +58,7 @@ The library use [ES6 Promise](https://developers.google.com/web/fundamentals/get
   });
 
   co(function *(){
-    // opening connection
+    // prepare connection
     yield generator.open();
     // generate service
     let EOS = yield generator.getService('EnapsoOntology');
