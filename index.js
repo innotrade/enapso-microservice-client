@@ -19,7 +19,7 @@ const EventEmitter = require('eventemitter2').EventEmitter2;
 
 const parse = (client, service, response) => {
     let api = response.API;
-    // iterating by app controllers
+    // iterating by service controllers
     for (let cname in api) {
         // controller object
         let controller = {};
@@ -44,7 +44,6 @@ const parse = (client, service, response) => {
                 (function (mapi) {
                     controller[mapi.name] = function () {
                         let args = arguments;
-
                         return new Promise((resolve, reject) => {
                             return new Function("return {f: " + mapi.sourceCode + "}")
                                 ()["f"].call(mapi.scope, {
@@ -63,7 +62,7 @@ const parse = (client, service, response) => {
                 })(capi.methods[index]);
             }
         }
-        // setting controller in app object
+        // upgrading the service object
         service[cname] = controller;
     }
 
