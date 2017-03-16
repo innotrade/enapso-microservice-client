@@ -18,7 +18,7 @@ const expect = require("chai").expect;
 const MS = require("./index.js");
 
 const generator = new MS({
-    url: 'https://dash.innotrade.com/http',
+    url: 'wss://heprdlxdemo01.innotrade.com',
     username: 'guest',
     password: 'guest'
 });

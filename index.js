@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2016 Innotrade GmbH <https://innotrade.com>
+ Copyright (C) 2017 Innotrade GmbH <https://innotrade.com>
 
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
@@ -15,16 +15,21 @@
  */
 
 const HttpClient = require('enapso-client-js').HttpClient;
+const WebSocketClient = require('enapso-client-js').WebSocketClient;
 const parse = require('./lib/parser.js');
 
 class MicroServiceGenerator {
     constructor(config) {
         this.config = config;
-        this.client = new HttpClient({
+        this.client = (config.url || 'http').startsWith('http') ? new HttpClient({
             url: config.url || 'https://dash.innotrade.com/http',
             username: config.username || 'guest',
             password: config.password || 'guest',
             autoSyncTimeout: config.autoSyncTimeout || 400
+        }) : new WebSocketClient({
+            url: config.url || 'wss://heprdlxdemo01.innotrade.com',
+            username: config.username || 'guest',
+            password: config.password || 'guest'
         });
     }
 

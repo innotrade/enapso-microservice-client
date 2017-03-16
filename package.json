@@ -1,6 +1,6 @@
 {
   "name": "enapso-microservice-client",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "HTTP/WebSocket Client (JavaScript) for Enapso Microservices.",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   "author": "Rolando Santamaria Maso <rsantamaria@innotrade.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "enapso-client-js": "^1.0.0"
+    "enapso-client-js": "^1"
   },
   "repository": {
     "type": "git",

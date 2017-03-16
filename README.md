@@ -21,6 +21,15 @@ The library use [ES6 Promise](https://developers.google.com/web/fundamentals/get
     password: 'guest'
   });
   ```
+  ```js
+  // using WebSocket connection
+  const generator = new MicroServiceGenerator({
+    url: 'wss://heprdlxdemo01.innotrade.com',
+    username: 'guest',
+    password: 'guest'
+  });
+  ```
+  ```
 
 2. Preparing generator:
   ```js
